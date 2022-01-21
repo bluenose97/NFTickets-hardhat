@@ -10,7 +10,7 @@ contract EventFactory is TicketFactory {
       string name;
       string location;
       uint32 capacity;
-      uint[] eventTickets;
+      uint[] tickets;
     }
 
     Event[] public events;
@@ -34,5 +34,9 @@ contract EventFactory is TicketFactory {
 
     function getNumberOfEvents() public view returns (uint) {
         return events.length;
+    }
+
+    function getEvents() public view returns (Event[] memory) {
+        return events;
     }
 }
